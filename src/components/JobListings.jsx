@@ -6,12 +6,18 @@ const JobListings = ({ isHome = false }) => {
   const [jobs, setJobs] = useState([]);
   const [loading, setLoading] = useState(true);
 
+  // Determine the base API URL based on the environment
+  const baseURL = import.meta.env.DEV
+    ? "/api/jobs" // Local API URL when in development
+    : "https://67f64a8a42d6c71cca615e86.mockapi.iobaseURL"; // Production API URL
+
   useEffect(() => {
     const fetchJobs = async () => {
-      const apiURL = isHome ? "/api/jobs?_limit=3" : "/api/jobs";
+      const apiURL = baseURL;
       try {
         const response = await fetch(apiURL);
         const data = await response.json();
+        console.log("📦 API Data:", data);
         setJobs(data);
       } catch (error) {
         console.log("Error fetching data", error);
