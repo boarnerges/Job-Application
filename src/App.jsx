@@ -9,7 +9,7 @@ import {
 } from "react-router-dom";
 import MainLayouts from "./layouts/MainLayouts";
 import NotFoundPage from "./pages/NotFoundPage";
-import JobPage, { jobLoader } from "./pages/jobPage";
+import JobPage, { jobLoader } from "./pages/JobPage";
 import AddJobPage from "./pages/AddJobPage";
 import EditJobPage from "./pages/EditJobPage";
 
