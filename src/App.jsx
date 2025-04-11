@@ -20,6 +20,7 @@ const App = () => {
     : "https://67f64a8a42d6c71cca615e86.mockapi.io/api/jobs";
 
   // Add New Job
+
   const addJob = async (newJob) => {
     const res = await fetch(baseURL, {
       method: "POST",

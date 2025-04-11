@@ -8,7 +8,7 @@ const JobListings = ({ isHome = false }) => {
 
   // Determine the base API URL based on the environment
   const baseURL = import.meta.env.DEV
-    ? "/api/jobs" // Local API URL when in development
+    ? "/api/jobs" // when in developmental
     : "https://67f64a8a42d6c71cca615e86.mockapi.io/api/jobs";
 
   useEffect(() => {
